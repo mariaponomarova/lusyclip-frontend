@@ -3,6 +3,7 @@ import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { getClipManifest, getClips, submitReview } from "../services/apiClient";
 import KeyframeViewer from "../components/KeyframeViewer";
 import { theme } from "../theme";
+import { BASE_URL } from "../services/apiClient";
 
 interface ClipManifest {
   provenance: {
@@ -309,7 +310,7 @@ export default function ClipDetailPage() {
           }}
         >
           <source
-            src={`http://localhost:8000/clips/${manifest.provenance.clip_id}/video`}
+            src={`${BASE_URL}/clips/${manifest.provenance.clip_id}/video`}
             type="video/mp4"
           />
         </video>

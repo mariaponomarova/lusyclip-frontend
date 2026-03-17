@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getReviewHistory } from "../services/apiClient";
 import { theme } from "../theme";
+import { BASE_URL } from "../services/apiClient";
 
 interface ReviewEntry {
   clip_id: string;
@@ -161,7 +162,7 @@ export default function ReviewHistoryPage() {
                   }}
                 >
                   <img
-                    src={`http://localhost:8000/clips/${entry.clip_id}/keyframes/kf_0010.jpg`}
+                    src={`${BASE_URL}/clips/${entry.clip_id}/keyframes/kf_0010.jpg`}
                     alt={entry.clip_id}
                     style={{
                       width: "100%",

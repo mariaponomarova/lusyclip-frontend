@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:8000";
-//const BASE_URL = "http://100.81.156.57:8000";
+export const BASE_URL = "http://localhost:8000";
+//export const BASE_URL = "http://100.112.104.21:8000";
 
 // --- Types ---
 

@@ -1,4 +1,5 @@
 import { theme } from "../theme";
+import { BASE_URL } from "../services/apiClient";
 
 type KeyframeViewerProps = {
   clipId: string;
@@ -19,7 +20,7 @@ export default function KeyframeViewer({ clipId, numFrames }: KeyframeViewerProp
         return (
           <img
             key={i}
-            src={`http://localhost:8000/clips/${clipId}/keyframes/kf_${frameNumber}.jpg`}
+            src={`${BASE_URL}/clips/${clipId}/keyframes/kf_${frameNumber}.jpg`}
             alt={`Frame ${i + 1}`}
             style={{
               width: "100%",
